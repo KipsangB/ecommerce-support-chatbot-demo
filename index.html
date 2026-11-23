@@ -32,12 +32,51 @@
       </ul>
     </div>
   </div>
-  <script type="module">
-  import Chatbot from "https://unpkg.com/flowise-embed/dist/web.js"
-  Chatbot.init({
-      chatflowid: "a09dade3-6394-4aac-b757-0bbfadce01a4",
+   <script type="module">
+    iimport Chatbot from "https://unpkg.com/flowise-embed/dist/web.js"
+    Chatbot.init({
+        cchatflowid: "a09dade3-6394-4aac-b757-0bbfadce01a4",
       apiHost: "https://flowise-2-2-7-oz8l.onrender.com",
-  })
-</script>
+        theme: {
+            button: {
+                backgroundColor: "#0f172a",
+                right: 20,
+                bottom: 20,
+                size: 52,
+                iconColor: "white"
+            },
+            chatWindow: {
+                showTitle: true,
+                title: "Nairobi Tech Hub Support",
+                welcomeMessage: "Hi! 👋 You're chatting with Nairobi Tech Hub AI.\n\nPick an option below or type your question:",
+                backgroundColor: "#ffffff",
+                height: 550,
+                width: 400,
+                fontSize: 15,
+                starterPrompts: [
+                    "How do I pay via M-Pesa?",
+                    "Delivery fees (Nairobi vs. Mombasa)",
+                    "Return & warranty policy",
+                    "I need help from a human agent"
+                ],
+                starterPromptFontSize: 14,
+                botMessage: {
+                    backgroundColor: "#f1f5f9",
+                    textColor: "#0f172a"
+                },
+                userMessage: {
+                    backgroundColor: "#0f172a",
+                    textColor: "#ffffff"
+                },
+                footer: {
+                    textColor: "#64748b",
+                    text: "Powered by",
+                    company: "Nairobi Tech Hub AI",
+                    companyLink: "https://github.io"
+                }
+            }
+        }
+    })
+  </script>
 </body>
 </html>
